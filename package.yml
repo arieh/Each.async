@@ -3,3 +3,4 @@ author:  arieh
 current:  1.0b
 category: Native  
 tags:  [each,Array.each,Object.each,async]
+demo: http://jsfiddle.net/ariehg/xyFqW/
