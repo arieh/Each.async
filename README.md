@@ -16,7 +16,7 @@ How to use
 #### Array
 
     #JS
-    Object.each.async(arr,func[,bind[,time]]); 
+    Array.each.async(arr,func[,bind[,time]]); 
     
 
 Both method work just like the normal each loops, but can also receive a 4th paramater - time - that tells the function how long to set the delay before execution (set to 50 milisecs as a default).
