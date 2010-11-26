@@ -40,12 +40,13 @@ THE SOFTWARE
 function async(iter,func,bind,time){
     var k;
     function delayed(item,key,obj){
-        func.apply(bind,arguments);
+        func.call(bind,item,key,obj);
     }
     
     for (k in iter){
         if (iter.hasOwnProperty(k)){
-            delayed.delay(time || 50, null, [iter[k],k,iter]);
+            if (bind) delayed.delay(time || 0 , null, [ iter[k], k, iter ]);
+            else setTimeout(func, time || 0, iter[k], k, iter);
         }
     }
 }
